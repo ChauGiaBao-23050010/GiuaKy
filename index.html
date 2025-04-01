@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - CHÂU GIA BẢO</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script defer src="JS/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <style>
+      body {
+        background: url("Hinh/nen-bg.jpg") no-repeat center center fixed;
+        background-size: cover;
+      }
+    </style>
+
+    <div class="language-switcher">
+      <button id="vietnamese">Tiếng Việt</button>
+      <button id="english">English</button>
+    </div>
+
+    <div class="theme-switcher">
+      <button id="toggle-theme" class="theme-button">
+        <img id="theme-icon" src="Hinh/mattrang.jpg" alt="Theme Icon" />
+        <span id="theme-text">Chế Độ Tối</span>
+      </button>
+      <button id="download-cv" class="theme-button">Tải CV PDF</button>
+    </div>
+
+    <div class="container">
+      <div class="left-column">
+        <div class="profile">
+          <img src="Hinh/avt.jpg" alt="Ảnh đại diện" />
+          <h2 id="name">CHÂU GIA BẢO</h2>
+          <p class="jt" id="jt">Developer</p>
+        </div>
+
+        <ul class="contact">
+          <li class="icon">
+            <img src="Hinh/phone.jpg" alt="Phone" />
+            <span class="tooltip">☎️ +84 0325992413</span>
+          </li>
+          <li class="icon">
+            <img src="Hinh/email.jpg" alt="Email" />
+            <span class="tooltip">13chaugiabao@gmail.com</span>
+          </li>
+          <li class="icon">
+            <img src="Hinh/fb.jpg" alt="Facebook" />
+            <span class="tooltip">🌐 <a href="https://www.facebook.com/Bảo Đập Trai" target="_blank">Facebook</a></span>
+          </li>
+          <li class="icon">
+            <img src="Hinh/zalo.png" alt="Zalo" />
+            <span class="tooltip">💬 <a href="https://chat.zalo.me/Bảo" target="_blank">Zalo</a></span>
+          </li>
+          <li class="icon">
+            <img src="Hinh/app.png" alt="WhatsApp" />
+            <span class="tooltip">💬 <a href="https://wa.me/0325992413" target="_blank">WhatsApp</a></span>
+          </li>
+          <li class="icon">
+            <img src="Hinh/link.png" alt="LinkedIn" />
+            <span class="tooltip">🔗 <a href="https://www.linkedin.com/in/Ken Elder/" target="_blank">LinkedIn</a></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="right-column">
+        <section class="section-link" onclick="toggleSection('gioithieu')">
+          <h2 id="gt">Giới Thiệu</h2>
+          <p id="gt1"></p>
+          <div class="detail" id="gioithieu">
+            <p id="gt2"></p>
+            <p id="gt3"></p>
+            <a href="gioithieu.html" class="detail-link" id="al">Xem Chi Tiết</a>
+          </div>
+        </section>
+
+        <section class="section-link" onclick="toggleSection('kynang')">
+          <h2 id="kn">Kỹ Năng</h2>
+          <p id="kn1"></p>
+          <div class="detail" id="kynang">
+            <ul id="kn2"></ul>
+            <a href="kynang.html" class="detail-link" id="skills-link">Xem Chi Tiết</a>
+          </div>
+        </section>
+
+        <section class="section-link" onclick="toggleSection('kinhnghiem')">
+          <h2 id="kng">Kinh Nghiệm</h2>
+          <p id="kng1"></p>
+          <div class="detail" id="kinhnghiem">
+            <p id="kng2"></p>
+            <p id="kng3"></p>
+            <a href="kinhnghiem.html" class="detail-link" id="experience-link">Xem Chi Tiết</a>
+          </div>
+        </section>
+
+        <section class="section-link" onclick="toggleSection('duan')">
+          <h2 id="da">Dự Án</h2>
+          <p id="da1"></p>
+          <div class="detail" id="duan">
+            <p id="da2"></p>
+            <p id="da3"></p>
+            <a href="duan.html" class="detail-link" id="projects-link">Xem Chi Tiết</a>
+          </div>
+        </section>
+      </div>
+    </div>
