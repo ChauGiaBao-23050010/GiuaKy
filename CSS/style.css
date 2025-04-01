@@ -1,0 +1,398 @@
+/* Cấu hình chung */
+body {
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Chế độ Light Mode */
+body.light-mode {
+  background: white;
+  color: black;
+}
+
+/* Container chính */
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: black;
+  opacity: 0.9;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px lime;
+  transition: background-color 0.3s, box-shadow 0.3s; 
+}
+
+/* Chế độ Light Mode cho Container */
+.container.light-mode {
+  background: #f4f4f4;
+  box-shadow: 0 0 15px #888;
+}
+
+/* Cột trái */
+.left-column {
+  width: 30%;
+  background: black;
+  padding: 20px;
+  text-align: center;
+  border-right: 2px solid lime;
+}
+
+/* Chế độ Light Mode cho cột trái */
+.left-column.light-mode {
+  background: #f4f4f4;
+  color: black;
+}
+
+/* Định dạng tên */
+.left-column h2 {
+  color: lime;
+  text-shadow: 0 0 10px lime, 0 0 20px lime;
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  padding: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  box-shadow: 0 0 15px lime;
+}
+
+/* Chế độ Light Mode cho tên */
+.left-column.light-mode h2 {
+  color: #333;
+  text-shadow: none;
+}
+
+/* Profile Image */
+.profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid lime;
+  box-shadow: 0 0 10px lime;
+  transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+  transform: scale(1.05); /* Phóng to ảnh khi hover */
+}
+
+/* Cột phải */
+.right-column {
+  width: 70%;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Chế độ Light Mode cho cột phải */
+.right-column.light-mode {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/* Mục thông tin */
+.section-link {
+  background: black;
+  opacity: 0.9;
+  backdrop-filter: blur(5px);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid lime;
+}
+
+/* Chế độ Light Mode cho mục thông tin */
+.section-link.light-mode {
+  background: #f4f4f4;
+  border-color: #888;
+}
+
+/* Màu chữ và hiệu ứng hover cho mục thông tin */
+.section-link h2 {
+  color: lime;
+}
+
+/* Chế độ Light Mode cho chữ mục thông tin */
+.section-link.light-mode h2 {
+  color: #333;
+}
+
+/* Các lớp CSS để hiển thị/ẩn phần chi tiết với hiệu ứng */
+.detail {
+  display: none; /* Ẩn mặc định */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.detail.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Nút xem chi tiết */
+.detail-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: lime;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 2px solid black;
+}
+
+/* Thêm hiệu ứng cho hover */
+.detail-link:hover {
+  background: darkgreen;
+  color: white;
+}
+
+/*----------------------------------------------------------------------- */
+
+/* Khung nền mờ cho nội dung */
+.container-page {
+  position: relative;
+  background: black;
+  opacity: 0.9;
+  backdrop-filter: blur(5px);
+  color: white;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px lime;
+  text-align: center;
+  border: 2px solid lime;
+}
+
+/* Áp dụng hiệu ứng phát quang cho chữ */
+.jt {
+  color: lime; 
+  font-size: 24px; 
+  font-weight: bold; 
+}
+
+/* Tiêu đề */
+h1,
+h2 {
+  color: lime;
+  text-shadow: 0 0 10px lime;
+}
+
+/* Định dạng chữ */
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+/* ----------------------------------------------------------------------------------------------*/
+/* chuyển ngôn ngữ*/
+#language-switcher {
+  gap: 10px;
+}
+
+.language-switcher button {
+  background-color: black;
+  color: lightgreen;
+  border: 2px solid lightgreen;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#language-switcher button:hover {
+  background-color: lightgreen;
+  color: black;
+}
+/* ----------------------------------------------------------------------------------------------*/
+/*ligt dark */
+/* Chế độ sáng */
+body.light-mode {
+  background: white;
+  color: black;
+}
+
+.light-mode .container {
+  background: lightgray;
+}
+
+.light-mode .left-column {
+  background: lightgray;
+  color: black;
+}
+
+.light-mode .section-link {
+  background: lightgray;
+  border: 1px solid darkslategray;
+}
+
+.light-mode .section-link:hover {
+  background: silver;
+}
+/* ----------------------------------------------------------------------------------------------*/
+/* Chế độ tối (mặc định) */
+body {
+  background: black;
+  color: white;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.left-column {
+  background: black;
+  color: white;
+}
+
+.section-link {
+  background: black;
+  border: 1px solid lime;
+}
+
+.section-link:hover {
+  background: darkolivegreen;
+}
+.theme-switcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.theme-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: whitesmoke;
+  color: black;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-button:hover {
+  background-color: darkgray;
+}
+
+.theme-button img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.theme-button:hover img {
+  transform: rotate(20deg);
+}
+
+.theme-button.dark-mode {
+  background-color: gainsboro;
+  color: whitesmoke;
+}
+
+.theme-button.dark-mode img {
+  filter: brightness(0.8);
+}
+
+/* ----------------------------------------------------------------------------------------------*/
+/*Địa chỉ liên hệ */
+/* Container của cột trái */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  width: 270px;
+}
+
+/* Danh sách icon liên hệ */
+.contact {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Mỗi icon trong danh sách */
+.contact .icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contact .icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+/* Hiệu ứng phóng to icon khi hover */
+.contact .icon:hover img {
+  transform: scale(1.1);
+}
+
+/* Tooltip khi hover */
+.contact .icon:hover span {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  color: white;
+  background-color: dimgray;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+  width: auto;
+  max-width: 200px;
+}
+
+/* Ẩn tooltip khi không hover */
+.contact .icon span {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Tạo hiệu ứng màu ngẫu nhiên cho tooltip */
+@keyframes randomColor {
+  0% { background-color: tomato; }
+  20% { background-color: mediumseagreen; }
+  40% { background-color: dodgerblue; }
+  60% { background-color: rebeccapurple; }
+  80% { background-color: darkorange; }
+  100% { background-color: indigo; }
+}
+
+.contact .icon:hover span {
+  animation: randomColor 3s infinite;
+}
+
+/* Thêm hiệu ứng cho toàn bộ icon liên hệ */
+.contact .icon:hover img {
+  transform: scale(1.1);
+}
+
+/*---------------------------------------------------------- */
